@@ -3,6 +3,7 @@ package com.everton.raulgil;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.LocalDate;
 
 public class Main {
 
@@ -24,6 +25,8 @@ public class Main {
         InputStreamReader leitorTeclado = new InputStreamReader(System.in);
         BufferedReader entrada = new BufferedReader(leitorTeclado);
 
+        ShowDeCalouros s = new ShowDeCalouros();
+
         while(true) {
             try {
                 System.out.println("\n## PROGRAMA RAUL GIL - Show de Calouros ##");
@@ -34,9 +37,29 @@ public class Main {
 
                 if(opcao == 'C') {
                     // cadastrar calouro
+                    Calouro c = new Calouro();
+                    System.out.println("Dados do Calouro: ");
+
+                    System.out.print("Nome: ");
+                    c.setNome(entrada.readLine());
+
+                    System.out.print("\nCPF: ");
+                    c.setCpf(entrada.readLine());
+
+                    s.addCalouro(c);
 
                 } else if(opcao == 'J') {
                     // cadastrar jurado
+                    Jurado j = new Jurado();
+                    System.out.println("Dados do Jurado: ");
+
+                    System.out.print("Nome: ");
+                    j.setNome(entrada.readLine());
+
+                    System.out.print("Data de Nascimento [dd/mm/yyyy]: ");
+                    j.setDataNasc(LocalDate.parse(entrada.readLine()));
+
+                    s.addJurado(j);
 
                 } else if(opcao == 'P') {
                     // cadastrar apresentação para o calouro

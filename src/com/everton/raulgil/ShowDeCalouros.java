@@ -12,4 +12,20 @@ public class ShowDeCalouros {
 
     public ShowDeCalouros() {
     }
+
+    public void addCalouro(Calouro c) {
+        calouros.add(c);
+    }
+
+    public int getNumeroCalouros() {
+        return calouros.size();
+    }
+
+    public void addJurado(Jurado j) {
+        jurados.add(j);
+    }
+
+    public int getNumeroJurados() {
+        return jurados.size();
+    }
 }
