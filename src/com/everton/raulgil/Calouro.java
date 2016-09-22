@@ -51,4 +51,8 @@ public class Calouro {
         return cpf != null ? cpf.equals(calouro.cpf) : calouro.cpf == null;
 
     }
+
+    public void addApresentacao(Apresentacao ap) {
+        apresentacoes.add(ap);
+    }
 }

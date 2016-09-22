@@ -63,6 +63,34 @@ public class Main {
 
                 } else if(opcao == 'P') {
                     // cadastrar apresentação para o calouro
+                    System.out.println("Apresentação do Calouro");
+
+                    System.out.print("Informe o CPF do Calouro: ");
+                    Calouro c = s.getCalouroPorCpf(entrada.readLine());
+
+                    Apresentacao ap = new Apresentacao();
+
+                    System.out.println("Título da apresentação: ");
+                    ap.setTitulo(entrada.readLine());
+
+                    System.out.println("Descrição da apresentação");
+                    ap.setDescricao(entrada.readLine());
+
+                    System.out.println("Notas para o Calouro " + c.getNome() + " : " + c.getCpf());
+
+                    if(s.getNumeroJurados() == 0) throw new Exception("Nenhum jurado cadastrado");
+
+                    for(int i = 0; i < s.getNumeroJurados(); i++) {
+                        double nota = 0.0;
+                        Jurado j = s.getJuradoNaPosicao(i);
+
+                        System.out.println("Informe a nota do jurado " + j.getNome() + ":");
+                        nota = Double.valueOf(entrada.readLine());
+
+                        ap.addNota(j, nota);
+                    } // para cada jurado
+
+                    c.addApresentacao(ap);
 
                 } else if(opcao == 'L') {
                     // listar calouros

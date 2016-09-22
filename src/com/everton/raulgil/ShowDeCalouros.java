@@ -13,19 +13,60 @@ public class ShowDeCalouros {
     public ShowDeCalouros() {
     }
 
+    /**
+     * Adiciona um Calouro ao ArrayList de Calouros
+     *
+     * @param c             calouro a ser adicionado no ArrayList
+     */
     public void addCalouro(Calouro c) {
         calouros.add(c);
     }
 
+    /**
+     * Retorna o total de participantes do Show de Calouros
+     *
+     * @return              numero de particiapantes
+     */
     public int getNumeroCalouros() {
         return calouros.size();
     }
 
+    /**
+     * Adiciona um jurado ao ArrayList de Jurados
+     *
+     * @param j             Jurado a ser adicionado no ArrayList
+     */
     public void addJurado(Jurado j) {
         jurados.add(j);
     }
 
+    /**
+     * Retorna o total de jurados do Show de Calouros
+     *
+     * @return              numero de jurados do Show de Calouros
+     */
     public int getNumeroJurados() {
         return jurados.size();
+    }
+
+    /**
+     * Retorna o calouro que possui o cpf informado
+     *
+     * @param cpf           cpf do calouro
+     * @return              calouro encontrado no ArrayList
+     * @throws Exception    calouro não encontrado
+     */
+    public Calouro getCalouroPorCpf(String cpf) throws Exception{
+
+        for(Calouro c : calouros) {
+            if(c.getCpf() == cpf)
+                return c;
+        }
+
+        throw new Exception("Calouro não encontrado para o CPF informado.");
+    }
+
+    public Jurado getJuradoNaPosicao(int i) {
+        return jurados.get(i);
     }
 }
