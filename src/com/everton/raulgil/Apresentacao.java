@@ -37,4 +37,8 @@ public class Apresentacao {
     public void addNota(Jurado j, double n) {
         notasJurados.put(j, n);
     }
+
+    public double getNotaDoJurado(Jurado j) {
+        return notasJurados.get(j);
+    }
 }
