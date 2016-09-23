@@ -94,6 +94,7 @@ public class Main {
 
                 } else if(opcao == 'L') {
                     // listar calouros
+                    System.out.println(s.listarCalouros());
 
                 } else if(opcao == 'M') {
                     // media geral do programa

@@ -66,7 +66,23 @@ public class ShowDeCalouros {
         throw new Exception("Calouro não encontrado para o CPF informado.");
     }
 
+    public Calouro getCalouroNaPosicao(int i) {
+        return calouros.get(i);
+    }
+
     public Jurado getJuradoNaPosicao(int i) {
         return jurados.get(i);
+    }
+
+    public String listarCalouros() {
+        String listaDeCalouros = "";
+
+        for(Calouro c : calouros) {
+            listaDeCalouros += "Nome: "+ c.getNome() +
+                    "\nCPF: " + c.getCpf() +
+                    "\nMédia: " + c.getMedia() + "\n";
+        }
+
+        return listaDeCalouros;
     }
 }
