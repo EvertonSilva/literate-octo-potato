@@ -59,7 +59,7 @@ public class ShowDeCalouros {
     public Calouro getCalouroPorCpf(String cpf) throws Exception{
 
         for(Calouro c : calouros) {
-            if(c.getCpf() == cpf)
+            if(c.getCpf().equals(cpf))
                 return c;
         }
 

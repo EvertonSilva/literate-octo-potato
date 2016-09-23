@@ -7,6 +7,7 @@ import java.util.ArrayList;
  * Created by everton on 14/09/16.
  */
 public class Calouro {
+    double media;
     private String cpf;
     private String nome;
     private LocalDate dataNasc;
@@ -41,6 +42,10 @@ public class Calouro {
         this.nome = nome;
     }
 
+    public void addApresentacao(Apresentacao ap) {
+        apresentacoes.add(ap);
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -50,9 +55,5 @@ public class Calouro {
 
         return cpf != null ? cpf.equals(calouro.cpf) : calouro.cpf == null;
 
-    }
-
-    public void addApresentacao(Apresentacao ap) {
-        apresentacoes.add(ap);
     }
 }
