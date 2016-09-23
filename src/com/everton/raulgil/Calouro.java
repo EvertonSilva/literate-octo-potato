@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Created by everton on 14/09/16.
  */
 public class Calouro {
-    double media;
+    double media = 0;
     private String cpf;
     private String nome;
     private LocalDate dataNasc;
@@ -44,6 +44,18 @@ public class Calouro {
 
     public void addApresentacao(Apresentacao ap) {
         apresentacoes.add(ap);
+    }
+
+    public double getMedia() {
+        return media;
+    }
+
+    public void calcMedia() {
+        for(Apresentacao a : apresentacoes) {
+            a.calcMedia();
+            media += a.getMedia();
+        }
+        media = media / apresentacoes.size();
     }
 
     @Override
