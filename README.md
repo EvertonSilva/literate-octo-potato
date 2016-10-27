@@ -12,8 +12,8 @@ para um programa de show de calouros.
  
  O programa deve então calcular e exibir:
 
-  - A média de cada participante;
-	- A média geral de notas do programa todo (um numero apenas);
-	- Os 3 participantes ganhadores em ordem.
+ - A média de cada participante;
+ - A média geral de notas do programa todo (um numero apenas);
+ - Os 3 participantes ganhadores em ordem.
 
 
