@@ -1,4 +1,4 @@
-# Programação Orientada à Objetos :: Show de Calouros
+# Programação Orientada a Objetos :: Show de Calouros
 
 Solução para o problema proposto em sala para implementar,
 usando POO um software que realizasse as seguintes funções
