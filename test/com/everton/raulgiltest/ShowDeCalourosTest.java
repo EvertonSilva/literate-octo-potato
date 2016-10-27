@@ -4,7 +4,7 @@ import com.everton.raulgil.Calouro;
 import com.everton.raulgil.Jurado;
 import com.everton.raulgil.ShowDeCalouros;
 import org.junit.After;
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -41,14 +41,14 @@ public class ShowDeCalourosTest {
         int numCalouros = s.getNumeroCalouros();
         s.addParticipante(c);
 
-        Assert.assertEquals((numCalouros+1), s.getNumeroCalouros());
+        assertEquals((numCalouros+1), s.getNumeroCalouros());
     }
 
     @Test
     public void testInserirJurado() throws Exception {
         int numJurados = s.getNumeroJurados();
         s.addParticipante(j);
-        Assert.assertEquals((numJurados+1), s.getNumeroJurados());
+        assertEquals((numJurados+1), s.getNumeroJurados());
     }
 
     @Test
@@ -57,7 +57,7 @@ public class ShowDeCalourosTest {
         s.addParticipante(c);
         Calouro outroCalouro = s.getCalouroPorCpf(cpf);
 
-        Assert.assertEquals(c, outroCalouro);
+        assertEquals(c, outroCalouro);
     }
 
     @Test
@@ -65,6 +65,6 @@ public class ShowDeCalourosTest {
         s.addParticipante(j);
         Jurado j2 = s.getJuradoNaPosicao(0);
 
-        Assert.assertEquals(j, j2);
+        assertEquals(j, j2);
     }
 }

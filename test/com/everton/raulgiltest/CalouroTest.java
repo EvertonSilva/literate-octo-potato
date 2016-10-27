@@ -4,7 +4,7 @@ import com.everton.raulgil.Apresentacao;
 import com.everton.raulgil.Calouro;
 import com.everton.raulgil.Jurado;
 import com.everton.raulgil.ShowDeCalouros;
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -48,7 +48,7 @@ public class CalouroTest {
     public void testCalcMedia() throws Exception {
         double mediaGeralCalouro = (calcMedia(notas1) + calcMedia(notas2)) / 2;
         c.calcMedia();
-        Assert.assertEquals(mediaGeralCalouro, c.getMedia(), 0.0001);
+        assertEquals(mediaGeralCalouro, c.getMedia(), 0.0001);
     }
 
     // Helper para calcular a media de um conjunto de notas

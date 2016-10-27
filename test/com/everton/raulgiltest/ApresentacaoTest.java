@@ -3,7 +3,7 @@ package com.everton.raulgiltest;
 import com.everton.raulgil.Apresentacao;
 import com.everton.raulgil.Jurado;
 import com.everton.raulgil.ShowDeCalouros;
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -41,7 +41,7 @@ public class ApresentacaoTest {
 
         ap.addNota(j, nota);
 
-        Assert.assertEquals(6.5, ap.getNotaDoJurado(j), 0.5);
+        assertEquals(6.5, ap.getNotaDoJurado(j), 0.5);
     }
 
     @Test
@@ -61,7 +61,7 @@ public class ApresentacaoTest {
 
         ap.calcMedia();
 
-        Assert.assertEquals(media, ap.getMedia(), 0.0001);
+        assertEquals(media, ap.getMedia(), 0.0001);
 
     }
 }
