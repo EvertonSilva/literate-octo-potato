@@ -10,7 +10,7 @@ para um programa de show de calouros.
 	 apresentações no mesmo programa – guardar título e descrição de cada apresentação);
  - Sejam informadas notas para cada jurado e para cada apresentação;
  
- O programa deve então calcular e exibir:
+O programa deve então calcular e exibir:
 
  - A média de cada participante;
  - A média geral de notas do programa todo (um numero apenas);
