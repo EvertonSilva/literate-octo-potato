@@ -108,7 +108,7 @@ public class Main {
                 } else if(opcao == 'V') {
                     // vencedores
                     System.out.println("::Vencedores::");
-                    s.mostrarVencedores();
+                    System.out.println(s.listarCalouros(s.getVencedores()));
                 } else if(opcao == 'S') {
                     // sair do programa
                     System.out.println("That's all folks!!!");

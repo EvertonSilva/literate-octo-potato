@@ -99,13 +99,13 @@ public class ShowDeCalouros implements Iterable<Calouro> {
      * Método para mostrar os 3 primeiros colocados
      * @return Listagem de calouros vencedores
      */
-    public String mostrarVencedores() {
+    public List<Calouro> getVencedores() {
         List<Calouro> ranking = new ArrayList<Calouro>();
 
         Collections.sort(calouros);
         ranking = calouros.subList(0, 2);
 
-        return listarCalouros(ranking);
+        return ranking;
     }
     @Override
     public Iterator<Calouro> iterator() {

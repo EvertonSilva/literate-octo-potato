@@ -46,7 +46,12 @@ public class Calouro implements Comparable {
         apresentacoes.add(ap);
     }
 
+    public Apresentacao getApresentacaoNaPosicao(int i) {
+        return apresentacoes.get(i);
+    }
+
     public double getMedia() {
+        calcMedia();
         return media;
     }
 
