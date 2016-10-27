@@ -39,7 +39,7 @@ public class ShowDeCalourosTest {
     @Test
     public void testInserirCalouro() throws Exception {
         int numCalouros = s.getNumeroCalouros();
-        s.addCalouro(c);
+        s.addParticipante(c);
 
         Assert.assertEquals((numCalouros+1), s.getNumeroCalouros());
     }
@@ -47,14 +47,14 @@ public class ShowDeCalourosTest {
     @Test
     public void testInserirJurado() throws Exception {
         int numJurados = s.getNumeroJurados();
-        s.addJurado(j);
+        s.addParticipante(j);
         Assert.assertEquals((numJurados+1), s.getNumeroJurados());
     }
 
     @Test
     public void testGetCalouroPorCpf() throws Exception {
         String cpf = "321054278-39";
-        s.addCalouro(c);
+        s.addParticipante(c);
         Calouro outroCalouro = s.getCalouroPorCpf(cpf);
 
         Assert.assertEquals(c, outroCalouro);
@@ -62,7 +62,7 @@ public class ShowDeCalourosTest {
 
     @Test
     public void testGetJuradoNaPosicao() throws Exception {
-        s.addJurado(j);
+        s.addParticipante(j);
         Jurado j2 = s.getJuradoNaPosicao(0);
 
         Assert.assertEquals(j, j2);

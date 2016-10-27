@@ -30,7 +30,7 @@ public class CalouroTest {
             String nome = "Jurado " + (char)(i+65);
             LocalDate dataNasc = LocalDate.of(1975+i, 4+i, 1+i);
             Jurado j = new Jurado(nome, dataNasc);
-            s.addJurado(j);
+            s.addParticipante(j);
         }
 
         // preenche o mapa de notas da Ap1 e Ap2

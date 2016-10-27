@@ -24,7 +24,7 @@ public class ApresentacaoTest {
             String jNome = "Jurado " + (char)(i+65);
             LocalDate jDtNasc = LocalDate.of(1917, 3+i, 10);
             Jurado j = new Jurado(jNome, jDtNasc);
-            s.addJurado(j);
+            s.addParticipante(j);
         }
     }
 

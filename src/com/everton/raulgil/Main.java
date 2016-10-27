@@ -46,7 +46,7 @@ public class Main {
                     System.out.print("\nCPF: ");
                     c.setCpf(entrada.readLine());
 
-                    s.addCalouro(c);
+                    s.addParticipante(c);
 
                 } else if(opcao == 'J') {
                     // cadastrar jurado
@@ -59,7 +59,7 @@ public class Main {
                     System.out.print("Data de Nascimento [dd/mm/yyyy]: ");
                     j.setDataNasc(LocalDate.parse(entrada.readLine()));
 
-                    s.addJurado(j);
+                    s.addParticipante(j);
 
                 } else if(opcao == 'P') {
                     // cadastrar apresentação para o calouro
@@ -94,12 +94,21 @@ public class Main {
 
                 } else if(opcao == 'L') {
                     // listar calouros
-                    System.out.println(s.listarCalouros());
+                    System.out.println("::Calouros participantes::\n" +
+                            s.listarCalouros(null));
 
                 } else if(opcao == 'M') {
                     // media geral do programa
+                    double mediaGeral = 0.0;
+                    for(Calouro c : s) {
+                        mediaGeral += c.getMedia();
+                    }
+                    System.out.println("Média geral do programa foi de: " +
+                            mediaGeral / s.getNumeroCalouros());
                 } else if(opcao == 'V') {
                     // vencedores
+                    System.out.println("::Vencedores::");
+                    s.mostrarVencedores();
                 } else if(opcao == 'S') {
                     // sair do programa
                     System.out.println("That's all folks!!!");

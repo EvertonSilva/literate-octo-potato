@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Created by everton on 14/09/16.
  */
-public class Calouro {
+public class Calouro implements Comparable {
     double media = 0;
     private String cpf;
     private String nome;
@@ -67,5 +67,22 @@ public class Calouro {
 
         return cpf != null ? cpf.equals(calouro.cpf) : calouro.cpf == null;
 
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Calouro outroCalouro = (Calouro) o;
+
+        // Critério de comparação de dois calouros:
+        // as notas maiores devem ser colocadas "na frente"
+        // assim ordenamos a lista de calouros por ordem
+        // decrescente de notas e evitamos ter que ler
+        // os vencedores a partir do final da lista
+        if(this.getMedia() > outroCalouro.getMedia())
+            return -1;
+        else if(this.getMedia() < outroCalouro.getMedia())
+            return 1;
+
+        return 0;
     }
 }
